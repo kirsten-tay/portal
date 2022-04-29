@@ -3,7 +3,7 @@ import { Outlet } from 'react-router'
 import {BellIcon}from '@heroicons/react/outline'
 
 
-const MainLayout = () => {
+const dashboardLayout = () => {
   return (
     <div>
        <nav className="bg-gray-800 w-full h-full">
@@ -54,4 +54,4 @@ const MainLayout = () => {
   )
 }
 
-export default MainLayout
+export default dashboardLayout;
