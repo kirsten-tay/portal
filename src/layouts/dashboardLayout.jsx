@@ -1,7 +1,10 @@
 import React from 'react'
 import { Outlet } from 'react-router'
+import Add from './../components/add'
 import {BellIcon}from '@heroicons/react/outline'
+import {SidebarContent} from "react-pro-sidebar"
 
+      
 
 const dashboardLayout = () => {
   return (
@@ -22,6 +25,7 @@ const dashboardLayout = () => {
           <div class="flex">
           <div class="hidden md:block">
           <div class=" flex items-center ">
+             <Add/>
             <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
               <span  class="sr-only">View notifications</span>
               <BellIcon class="h-6 w-6" />
@@ -48,10 +52,14 @@ const dashboardLayout = () => {
 
               </div>
               </div>
+            
 </div>
+    <Outlet/>
       </nav>
-    </div>
-  )
-}
+      
+      </div>
+
+
+
 
 export default dashboardLayout;
