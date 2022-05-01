@@ -2,7 +2,12 @@ import React from 'react'
 import { Outlet } from 'react-router'
 import Add from './../components/add'
 import {BellIcon}from '@heroicons/react/outline'
-import {SidebarContent} from "react-pro-sidebar"
+import { ProSidebar, Menu,MenuItem, SubMenu } from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
+import Profilebutton from './../components/profilebutton'
+import Portal from '../components/Portal';
+
+
 
       
 
@@ -32,34 +37,46 @@ const dashboardLayout = () => {
             </button>
             </div>
             </div>
+           
 
-            <div class=" relative">
-              <div>
-                <button type="button" class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                  <span class="sr-only">Open user menu</span>
-                  <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
-                </button>
-              </div>
+            <div class=" relative">    
+          
+            <SubMenu icon={<Profilebutton />}>
 
-              <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <Menu class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
              
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                <MenuItem class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</MenuItem>
 
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                <MenuItem class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</MenuItem>
 
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
-              </div>
+                <MenuItem class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</MenuItem>
+              </Menu>
+              </SubMenu>
 
-              </div>
               </div>
             
+            </div>
+          
 </div>
     <Outlet/>
       </nav>
-      
+      <div >
+       <div class="flex items-center  justify-between  ">
+      <ProSidebar className="flex h-full " >
+      <Menu iconShape="square" className="flex space-y-5" >
+      <MenuItem icon={<BellIcon/>}>Dashboard</MenuItem>
+      <MenuItem icon={<Portal/>}/>
+      <MenuItem></MenuItem>
+  </Menu>
+  </ProSidebar>
+  </div>
+</div>
       </div>
 
 
+  
+  )
 
+}
 
 export default dashboardLayout;
