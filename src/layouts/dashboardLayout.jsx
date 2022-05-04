@@ -61,8 +61,8 @@ const dashboardLayout = () => {
     <Outlet/>
       </nav>
       <div >
-       <div class="flex items-center  justify-between  ">
-      <ProSidebar className="flex h-full " >
+       <div class="flex items-center  justify-between bg-slate-600  ">
+      <ProSidebar className="flex h-full bg-slate-600 " >
       <Menu iconShape="square" className="flex space-y-5" >
       <MenuItem icon={<BellIcon/>}>Dashboard</MenuItem>
       <MenuItem icon={<Portal/>}/>
