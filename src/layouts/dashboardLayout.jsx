@@ -27,11 +27,11 @@ const dashboardLayout = () => {
    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
 </div>
 
-          <div class="flex">
+           <div class="relative inline-block text-left">
           <div class="hidden md:block">
           <div class=" flex items-center ">
              <Add/>
-            <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+            <button type="button" class="inline-flex justify-center w-full  bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
               <span  class="sr-only">View notifications</span>
               <BellIcon class="h-6 w-6" />
             </button>
@@ -39,25 +39,21 @@ const dashboardLayout = () => {
             </div>
            
 
-            <div class=" relative">    
+            
           
-            <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="origin-top-right absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
             <div class="py-1" role="none">
-          <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-           <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-           <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+          <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Profile </a>
+           <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">settings</a>
            <form method="POST" action="#" role="none">
         <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
       </form>
-    </div>
-  </div>
-
-              </div>
+         </div>
+        </div>
+           </div>
             
-            </div>
           
 </div>
-    <Outlet/>
       </nav>
       <div >
        <div class="flex items-center  justify-between bg-slate-600  ">
@@ -67,7 +63,9 @@ const dashboardLayout = () => {
       <MenuItem icon={<Portal/>}/>
       <MenuItem></MenuItem>
   </Menu>
-  </ProSidebar>
+  </ProSidebar>   
+   <Outlet/>
+
   </div>
 </div>
       </div>
