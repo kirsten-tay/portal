@@ -33,6 +33,7 @@ const dashboardLayout = () => {
             <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
               <span  class="sr-only">View notifications</span>
               <BellIcon class="h-6 w-6 text-white" />
+              <div className="bg-blue-500 absolute py-0.25 px-2 rounded-full  top-1 right-12 text-white">5</div>
             </button>
             </div>
             </div>
