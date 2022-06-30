@@ -60,10 +60,8 @@ const dashboardLayout = () => {
 </div>
       </nav>
       <div >
-       <div class="flex  items-center  origin-left justify-between bg-slate-600  ">
-
-
- 
+       <div class="flex flex-row  items-center  origin-left justify-between  ">
+       
     <Outlet/>
 </div>
     </div>
